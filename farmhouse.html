@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rathore Farmhouse | Vasu Rathore</title>
+  <link rel="stylesheet" href="farmhouse.css" />
+  <meta name="description" content="Rathore Farmhouse — premium seeds & agricultural chemicals. Owned by Vasu Rathore." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#" class="logo">Rathore Farmhouse</a>
+        <span class="owner">Owned by Vasu Rathore</span>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <h1 id="hero-title">Seeds & Farming Supplies — Trusted Quality</h1>
+        <p>High-yield seeds, organic & hybrid varieties, and safe agricultural chemicals to boost your harvest.</p>
+        <div class="hero-actions">
+          <button id="exploreBtn" class="btn">Explore Products</button>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2 class="section-title">About Rathore Farmhouse</h2>
+      <p class="lead">Rathore Farmhouse is dedicated to supplying farmers with premium seeds and effective agricultural inputs. Our focus is on quality, sustainability and farmer success.</p>
+    </section>
+
+    <section id="products" class="section container">
+      <h2 class="section-title">Our Products</h2>
+      <div id="productsGrid" class="products-grid" aria-live="polite">
+        <!-- Product cards are injected by script.js -->
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2 class="section-title">Contact Us</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Message</button>
+          <button type="button" id="resetBtn" class="btn btn-ghost">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Rathore Farmhouse — Owned by Vasu Rathore</p>
+      <p class="small">Designed with care for farmers. For product inquiries call/email us.</p>
+    </div>
+  </footer>
+
+  <script src="farmhouse.js" defer></script>
+</body>
+</html>

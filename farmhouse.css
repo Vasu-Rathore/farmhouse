@@ -1,0 +1,159 @@
+/* styles.css — Rathore Farmhouse */
+:root{
+  --green-700:#2d7a32;
+  --green-600:#2f8b37;
+  --bg:#f6fff2;
+  --card:#ffffff;
+  --muted:#6b6b6b;
+  --radius:12px;
+  --container-width:1100px;
+  --gap:20px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#1f2d1f;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+.container{
+  width:calc(100% - 40px);
+  max-width:var(--container-width);
+  margin:0 auto;
+}
+
+.site-header{
+  background:linear-gradient(90deg,var(--green-700), var(--green-600));
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:50;
+  box-shadow:0 6px 18px rgba(15,60,15,0.12);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:var(--gap);
+  padding:14px 0;
+  justify-content:space-between;
+}
+
+.brand .logo{
+  font-weight:700;
+  color:white;
+  text-decoration:none;
+  font-size:20px;
+}
+.owner{display:block; font-size:12px; opacity:.9}
+
+.nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:18px;
+  font-weight:600;
+}
+.nav-toggle{display:none; background:transparent; color:white; border:none; font-size:20px; cursor:pointer}
+
+/* Hero */
+.hero{
+  min-height:62vh;
+  display:flex;
+  align-items:center;
+  background-image:linear-gradient(rgba(17,24,17,0.12), rgba(17,24,17,0.12)), url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=60');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  text-shadow:0 6px 20px rgba(0,0,0,0.45);
+  padding:70px 0;
+}
+
+.hero-inner{max-width:900px}
+.hero h1{font-size:40px; margin-bottom:12px}
+.hero p{font-size:18px; opacity:.95; margin-bottom:18px}
+
+.btn{
+  background:var(--green-700);
+  border:none;
+  color:white;
+  padding:12px 18px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+  letter-spacing:.3px;
+  box-shadow:0 6px 18px rgba(45,122,50,0.18);
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-ghost{
+  background:transparent;
+  border:2px solid rgba(255,255,255,0.18);
+  color:white;
+}
+
+/* Sections */
+.section{padding:56px 0}
+.section-title{font-size:28px; color:var(--green-700); margin-bottom:12px; text-align:center}
+.lead{max-width:900px; margin:0 auto; text-align:center; color:var(--muted); font-size:16px}
+
+/* Products */
+.products-grid{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:14px;
+  box-shadow:0 8px 24px rgba(25,40,25,0.06);
+  display:flex;
+  flex-direction:column;
+  min-height:320px;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.card:hover{transform:translateY(-6px); box-shadow:0 18px 36px rgba(10,40,10,0.09)}
+.card .media{
+  height:160px;
+  border-radius:10px;
+  overflow:hidden;
+  background:#eef7ec;
+}
+.card img{width:100%; height:100%; object-fit:cover; display:block}
+.card h3{margin:12px 0 6px; font-size:18px}
+.card p{flex:1; color:var(--muted); font-size:14px}
+.card .meta{display:flex; justify-content:space-between; align-items:center; margin-top:12px}
+.price{font-weight:800; color:var(--green-700)}
+
+/* Contact */
+.contact-form{max-width:720px}
+.form-row{margin-bottom:12px}
+label{display:block; font-weight:600; margin-bottom:6px}
+input,textarea{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e2e8e2;
+  font-size:14px;
+}
+.form-actions{display:flex; gap:12px; margin-top:8px}
+
+/* Footer */
+.site-footer{background:linear-gradient(90deg,var(--green-700), var(--green-600)); color:white; padding:22px 0; margin-top:30px}
+.footer-inner{display:flex; flex-direction:column; gap:6px; align-items:center}
+.small{opacity:.95; font-size:13px}
+
+/* Responsive */
+@media (max-width:880px){
+  .nav{display:none}
+  .nav-toggle{display:block}
+  .header-inner{gap:12px}
+  .hero h1{font-size:28px}
+}
